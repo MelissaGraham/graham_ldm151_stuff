@@ -1,0 +1,14 @@
+Where I could find a BibTeX format I've used it with the ADS key (or other standard, depending where paper was published) and added the field "IDS={CustomKey}". The result of using IDS should be that both ADS and custom keys will reference the same paper, and that no paper appears more than once in the bibliography (as can happen with e.g., "crossref={}"). I've used IDS for @ARTICLE, @TECHREPORT, @INPROCEEDINGS, and @INCOLLECTION, but I'm not sure the field is defined for all of them so it may take some tweaking.
+
+Where I couldn't find a BibTeX format on ADS or elsewhere, I made one using the custom key only. In these cases I've usually used @MISC and not @ARTICLE because they were typically for non-refereed online content. Note that if there are compilation issues the @MISC field "url={}" may need to be changed to "howpublished={\url{}}".
+
+
+PROBLEMS:
+
+Bosch15 --> could not find this anywhere on web, so the url remains unknown
+
+LuptonPhoto --> could not find a date for this document; did this document turn into this paper which we could cite instead: http://adsabs.harvard.edu/abs/2002SPIE.4836..350L
+
+Lutpon15 --> could not find this anywhere on the web, so the url remains unknown
+
+Kubica05, kubica05 --> there are two different paper citations with custom keys Kubica05 (ADS key: 2005AAS...207.2632K) and kubica05 (new key: NIPS2005_2915).

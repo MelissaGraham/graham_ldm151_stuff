@@ -1,6 +1,16 @@
+
+INCORPORATING CUSTOM KEYS WITH "IDS" FIELD:
+Relevant bibliography file is: new_bibliography.bib
 Where I could find a BibTeX format I've used it with the ADS key (or other standard, depending where paper was published) and added the field "IDS={CustomKey}". The result of using IDS should be that both ADS and custom keys will reference the same paper, and that no paper appears more than once in the bibliography (as can happen with e.g., "crossref={}"). I've used IDS for @ARTICLE, @TECHREPORT, @INPROCEEDINGS, and @INCOLLECTION, but I'm not sure the field is defined for all of them so it may take some tweaking.
 
+REFERENCES THAT STILL USE CUSTOM KEYS:
+Relevant bibliography files are: new_bibliography.bib, new_bibliography_no_IDS.bib
 Where I couldn't find a BibTeX format on ADS or elsewhere, I made one using the custom key only. In these cases I've usually used @MISC and not @ARTICLE because they were typically for non-refereed online content. Note that if there are compilation issues the @MISC field "url={}" may need to be changed to "howpublished={\url{}}".
+
+REMOVE AS MANY CUSTOM KEYS AS POSSIBLE:
+Relevant bibliography files are: new_bibliography_no_IDS.bib, script_convert_keys.txt
+If we use the script to convert the keys used to reference the bibliography in all the LaTeX text files, then it will be possible to use a bibliography with no "IDS" fields to deal with both ADS (or other standard) and custom keys. The result is that wherever possible, the ADS (or other standard) key will be used except for cases where there isn't one (e.g., online only documents).
+
 
 
 PROBLEMS:
